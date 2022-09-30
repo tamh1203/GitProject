@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        width: 30%
+    }
+
+    td {
+        padding: 8px;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    #displayLabel {
+        text-align: right;
+        border: solid 3px darkgreen;
+        display: inline-block;
+        width: 290px;
+        height: 24px;
+    }
+</style>
+
+<body>
+    <table border="1">
+        <label id="displayLabel"></label>
+        <tr>
+            <td><button id="(" onclick="functionABC(event)">(</button></td>
+            <td><button id=")" onclick="functionABC(event)">)</button></td>
+            <td><button id="%" onclick="functionABC(event)">%</button></td>
+            <td><button id="AC" onclick="functionABC(event)">AC</button></td>
+        </tr>
+        <tr>
+            <td><button id="7" onclick="functionABC(event)">7</button></td>
+            <td><button id="8" onclick="functionABC(event)">8</button></td>
+            <td><button id="9" onclick="functionABC(event)">9</button></td>
+            <td><button id="+" onclick="functionABC(event)">+</button></td>
+        </tr>
+        <tr>
+            <td><button id="4" onclick="functionABC(event)">4</button></td>
+            <td><button id="5" onclick="functionABC(event)">5</button></td>
+            <td><button id="6" onclick="functionABC(event)">6</button></td>
+            <td><button id="*" onclick="functionABC(event)">X</button></td>
+        </tr>
+        <tr>
+            <td><button id="1" onclick="functionABC(event)">1</button></td>
+            <td><button id="2" onclick="functionABC(event)">2</button></td>
+            <td><button id="3" onclick="functionABC(event)">3</button></td>
+            <td><button id="/" onclick="functionABC(event)">/</button></td>
+        </tr>
+        <tr>
+            <td><button id="0" onclick="functionABC(event)">0</button></td>
+            <!-- ta đặt tên functionABC cho hắn tường minh thôi ok -->
+            <td><button id="." onclick="functionABC(event)">.</button></td>
+            <!-- cái event mới quan trọng, hắn sẽ truyền cái sự kiện onclick vô trong cái hàm functionABC, ở trong hàm đó hồi nãy ta in ra console log xem bên trong có gì
+            thì thấy cái event.target chính là cái button đc ấn, cái event.target.attributes là toàn bộ attributes của button đó, trong attributes có cái id chính là cái ta set ở trên, nếu mi đặt là xxx="3" thì sẽ có attribute xxx trong button đó, chỗ ni ok chưa?- -mỗi lần làm mi qua bên console để test à, k test bên đó sao biết target là cái cần làò sam, như ta thì m rớt mạng =))để ta đổi mạng. cái ni ta làm cho mi thấy đc cách tìm ra thuộc tính của event, chớ còn cái cấu trúc event.target.attributes kiểu như là học thuộc luôn rồi, code js thì cứ nhớ rứa mà làm thôi, chỗ mà +-*/ nó tính ở đâu-->
+            <td><button id="=" onclick="functionABC(event)">=</button></td>
+            <td><button id="-" onclick="functionABC(event)">-</button></td>
+        </tr>
+    </table>
+</body>
+<script>
+    function functionABC(event) {
+        let id = event.target.attributes.id.value;
+        let displayLabel = document.getElementById('displayLabel');
+
+        if (id === '=') {
+            displayLabel.innerHTML = eval(displayLabel.innerHTML); //hàm eval là hàm có sẵn của js, hắn sẽ tính giúp mình cái biểu thức đc nhập vô, để ta ví dụ, chưa học đến mấy hàm này. không có học đâu, cái ni làm cty rồi gặp rồi biết thôi, chưa chắc thằng thầy đã xài tới cách ni, thằng thầy gặp mấy đứa hỏi nhác trả lắm, kêu bên js các ac k đụng tới cái này đâu, chỉ học cho biết v
+            // chỗ switch- case ta đọc mà éo hiểu, chỗ biểu thức. switch case mi không hiểu chỗ mô? ví dụ bài ni nge
+            // chỗ đặt biểu thức rồi đưa ra trường hợp đó =)) ok, mi hiểu đc cú pháp viết của thằng switch case chưa? chưa
+            // để ta ví dụ
+
+        } else {
+            console.log(id);
+            displayLabel.innerHTML = displayLabel.innerHTML + id;
+        }
+    }
+</script>
+
+</html>

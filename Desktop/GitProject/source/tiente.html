@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="demo">
+    <select name="" id="select1">
+        <option value="VN">VNĐ</option>
+        <option value="USA">USD</option>
+    </select>
+    <select name="" id="select2">
+        <option value="VN">VNĐ</option>
+        <option value="USA">USD</option>
+    </select>
+    <button type="button" onclick="select()">Convert</button>
+    <script>
+        function select() {
+            let a = document.getElementById('demo').value;
+            let selected1 = document.getElementById('select1').value;
+            let selected2 = document.getElementById('select2').value;
+           // alert(a);
+            if(selected1 == selected2)
+            {
+                alert(a);
+            }
+            if(selected1=='VN' && selected2 == 'USA')
+            {
+                alert(a/24000);
+            }
+            if(selected1=='USA' && selected2 == 'VN')
+            {
+                alert(a*24000);
+            }
+        }
+    </script>
+</body>
+
+</html>

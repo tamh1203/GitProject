@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập số :</p>
+    <input type="text" id="num">
+    <button type="button" onclick="num1()">Kiểm tra</button>
+    <script>
+        //let a = +document.getElementById(num()).value;
+        function num1()
+        {
+            let numBer = document.getElementById('num').value;
+            let numEven = numBer % 2;
+            if (numEven == 0){
+                alert((numBer)+ ' là số chẵn');
+            }
+            else
+            {
+                alert((numBer)+ 'là số lẻ');
+            }
+        }
+    </script>
+</body>
+</html>

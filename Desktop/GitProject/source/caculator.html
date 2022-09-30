@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        width: 30%
+    }
+
+    td {
+        padding: 8px;
+        border-collapse: collapse;
+        text-align: center;
+        color: bisque;
+    }
+
+    #displayLabel {
+        text-align: right;
+        border: solid 3px darkgreen;
+        display: inline-block;
+        width: 290px;
+        height: 24px;
+        font-weight: 900;
+    }
+    button{
+        color:royalblue;
+        font-weight: 900;
+        
+    }
+</style>
+
+<body>
+
+    <table border="1">
+        <label id="displayLabel"></label>
+        <tr>
+            <td><button id="(" onclick="functionABC(event)">(</button></td>
+            <td><button id=")" onclick="functionABC(event)">)</button></td>
+            <td><button id="%" onclick="functionABC(event)">%</button></td>
+            <td><button id="AC" onclick="functionABC(event)">AC</button></td>
+        </tr>
+        <tr>
+            <td><button id="7" onclick="functionABC(event)">7</button></td>
+            <td><button id="8" onclick="functionABC(event)">8</button></td>
+            <td><button id="9" onclick="functionABC(event)">9</button></td>
+            <td><button id="+" onclick="functionABC(event)">+</button></td>
+        </tr>
+        <tr>
+            <td><button id="4" onclick="functionABC(event)">4</button></td>
+            <td><button id="5" onclick="functionABC(event)">5</button></td>
+            <td><button id="6" onclick="functionABC(event)">6</button></td>
+            <td><button id="*" onclick="functionABC(event)">*</button></td>
+        </tr>
+        <tr>
+            <td><button id="1" onclick="functionABC(event)">1</button></td>
+            <td><button id="2" onclick="functionABC(event)">2</button></td>
+            <td><button id="3" onclick="functionABC(event)">3</button></td>
+            <td><button id="/" onclick="functionABC(event)">/</button></td>
+        </tr>
+        <tr>
+            <td><button id="0" onclick="functionABC(event)">0</button></td>
+            <td><button id="." onclick="functionABC(event)">.</button></td>
+            <td><button id="=" onclick="functionABC(event)">=</button></td>
+            <td><button id="-" onclick="functionABC(event)">-</button></td>
+        </tr>
+    </table>
+<script>
+    function functionABC(event)
+    {
+        let id = event.target.attributes.id.value;
+        let displayLabel = document.getElementById('displayLabel');
+        console.log(id);
+        if(id === '=')
+        {
+            displayLabel.innerHTML = eval(displayLabel.innerHTML);
+        }
+        else{
+            displayLabel.innerHTML = displayLabel.innerHTML + id;
+        }
+        if(id === 'AC')
+        {
+            displayLabel.innerHTML = '';
+        }
+    }
+</script>
+
+</body>
+
+</html>
