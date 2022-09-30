@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ĐIỂM THI KHỐI D</h1>
+    <p>MÔN TOÁN <input type="text" id="toan"></p>
+    <p>MÔN ANH <input type="text" id="van"></p>
+    <p>MÔN VĂN <input type="text" id="anh"></p>
+    <p>KHU VỰC 
+        <select id="select">
+            <option value="KV1">KV1</option>
+            <option value="KV2">KV2</option>
+            <option value="KV3">KV3</option>
+        </select>
+    </p>
+    <button type="button" onclick="sumBefore()">Tính điểm</button>
+    <script>
+        function sumBefore() {
+            let t = +document.getElementById('toan').value;
+            let a = +document.getElementById('anh').value;
+            let v = +document.getElementById('van').value;
+            let sumBefore = t + a + v;
+            let sumAfter = sumBefore;
+            let select = document.getElementById('select').value;
+        switch (select) {
+            case 'KV1':
+                sumAfter += 0.5;                
+                break;
+            case 'KV2': 
+                sumAfter += 0.75;
+                break;
+            case 'KV3': 
+                sumAfter += 1; 
+                break;       
+            default:
+                break;
+        }
+        document.getElementById('res').innerHTML="Tổng điểm là " +(sumAfter);
+        }
+    </script>
+    <h1 id="res"></h1>
+</body>
+</html>
