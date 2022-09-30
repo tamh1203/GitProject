@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="promt(7)">7</button>
+    <button onclick="promt(8)">8</button>
+    <button onclick="promt(9)">9</button>
+    <button onclick="promt('*')">*</button>
+    <button onclick="promt('+')">+</button>
+    <button onclick="promt('%')">%</button>
+    <button onclick="result('=')">=</button>
+    <button onclick="AC('AC')">AC</button>
+    <input type="text" id='display'>
+    <script>
+        function promt(inp) {
+            document.getElementById('display').value += inp;
+            let display = document.getElementById('display');
+            console.log(inp);
+        }
+       function AC()
+        {
+            document.getElementById('display').value = '';
+        }
+       function result(){
+        document.getElementById('display').value = eval(document.getElementById('display').value);
+       }
+           
+
+            
+    </script>
+</body>
+
+</html>
