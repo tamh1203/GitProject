@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="cost">
+    <button type="button" onclick="xemgia()">Xem giá</button>
+    <h2 id="res"></h2>
+    <script>
+     
+     function xemgia()
+     {
+        let a = document.getElementById('cost').value;
+        //alert(a);
+        switch (a) {
+            case 'Ổi':
+        document.getElementById('res').innerHTML = "20000VNĐ/Kg";
+                break;
+            case 'Dưa Hấu':
+        document.getElementById('res').innerHTML = "30000VNĐ/Kg";
+            default:
+                break;
+        }
+    }
+    </script>
+</body>
+</html>
