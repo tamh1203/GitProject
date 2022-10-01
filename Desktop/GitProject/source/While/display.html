@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="showMassage()">Click Me ! </button>
+    <script>
+        function showMassage(){
+            alert('Xin chào');
+        }
+      
+    </script>
+    <div id="messagerDiv"></div>
+    <button type="button" onclick="showMasseger()">Click Here ! </button>
+    <script>
+        function showMasseger()
+        {
+            document.getElementById('messagerDiv').innerHTML = "Xin chào" ;
+        }
+    </script>
+    <button type="button" onclick="showMessage();">Click Me!</button>
+    <script>
+     function showMessage(){
+         document.write('Xin chào!');
+     }
+    </script>
+
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+ function showMessage(){
+     console.log('Xin chào!');
+ }
+</script>
+</body>
+</html>
