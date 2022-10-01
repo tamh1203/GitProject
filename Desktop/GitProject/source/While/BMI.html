@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let canNang = +prompt("nhập cân nặng của bạn = ");
+    let chieuCao = +prompt("Nhập chiều cao của bạn = ");
+    let bmi = canNang / (chieuCao*chieuCao);
+    if(bmi<16 || bmi<18)
+    {
+     alert('Gầy');
+    }
+    else if(bmi>=18 || bmi < 25)
+    {
+        alert('Bình thường');
+    }
+    else if(bmi>=25)
+    {
+        alert('Thừa cân');
+    }
+   </script>
+</body>
+</html>
