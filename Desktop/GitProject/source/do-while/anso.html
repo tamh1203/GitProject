@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button type="button" onclick="demo()">Click me !</button>
+
+  <script>
+    function demo() {
+      //let n = prompt(" Nhập số bạn đoán từ 1 - 100 : ");
+      //console.log(Math.floor(Math.random() * 100) + 1) ;
+      let count = 1;
+      let anSo = Math.floor(Math.random() * 10);
+      while (count <= 3) {
+        let soDoan = +prompt('Nhập số bạn đoán 1-10: ');
+
+        if (soDoan < anSo) {
+          alert('Số bạn vừa nhập nhỏ hơn ');
+        }
+        if (soDoan > anSo) {
+          alert('Số bạn lớn hơn');
+        }
+        if (soDoan == anSo) {
+          alert('chúc mừng');
+        } else if (count == 3) {
+          alert('Bạn đã đoán quá 3 lần');
+          alert('Bạn đã thua !');
+        }
+        count++;
+      }
+      console.log(anSo);
+    }
+  </script>
+</body>
+
+</html>
