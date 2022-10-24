@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let s = prompt("Nhập ");
+    function isPalindrome(s) {
+      let kq = true;
+      for (let i = 0; i < s.length; i++) {
+        // console.log(s.length - 1 - i + "<br>");
+        // console.log(i);
+        if (s[i] !== s[s.length - 1 - i]) {
+          kq = false;
+          break;
+        }
+      }
+      return kq;
+    }
+    kq = isPalindrome(s);
+    if (kq == true) {
+      alert(" đối xứng");
+    }
+    else {
+      alert("không đối xứng")
+    }
+
+  </script>
+</body>
+
+</html>
