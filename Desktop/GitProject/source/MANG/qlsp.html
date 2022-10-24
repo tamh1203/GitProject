@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  button {
+    background-color: darkgreen;
+    color: aliceblue;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 0px solid black;
+  }
+
+  td {
+    padding: 5px;
+    text-align: left;
+  }
+
+  th {
+    background-color: black;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #eee;
+
+  }
+
+  tr:nth-child(odd) {
+    background-color: #fff;
+  }
+</style>
+
+<body>
+  <div>
+    <p>Add Product</p>
+    <input type="text" id="add">
+    <button onclick="addProduct()">Add</button>
+    <p>Display All Products</p>
+    <table id="displayArea" border="0"></table>
+  </div>
+  <div id="edit"></div>
+  <script>
+
+    let listProduct = ['Iphone12', 'Note10', 'S10', 'Ip13 Max', 'Nokia 1280'];
+    displayAll();
+    function displayAll() {
+      let str = ' <tr>' +
+        '<td>Product Name </td>' +
+        '<td></td>' +
+        '<td style="color:red;font-weight:bold";>' + listProduct.length + ' Product </td>' +
+        '</tr>';
+      for (let i = 0; i < listProduct.length; i++) {
+        str += '<tr><td>' + listProduct[i] + '</td>' +
+          '<td><button onclick="showFormEdit(' + i + ')">Edit</button></td>' +
+          '<td><button onclick="deleteProduct(' + i + ')">Delete</button></td></tr>'
+      }
+      document.getElementById('displayArea').innerHTML = str;
+    }
+    function addProduct() {
+      let productName = document.getElementById('add').value;
+      listProduct.push(productName);
+      displayAll();
+      document.getElementById('add').value = '';
+      console.log(listProduct);
+    }
+    function showFormEdit(index) {
+      let s = '';
+      s = '<input type ="text" id ="editProduct" value ="' + listProduct[index] + '"><button onclick ="saveProduct( ' + index + ')">Save</button>';
+      document.getElementById('edit').innerHTML = s;
+    }
+    function saveProduct(index) {
+      listProduct[index] = document.getElementById('editProduct').value;
+      document.getElementById('edit').innerHTML = '';
+      displayAll();
+      console.log(listProduct);
+    }
+    function deleteProduct(index) {
+      listProduct.splice(index, 1);
+      displayAll();
+      console.log(listProduct);
+    }
+
+  </script>
+</body>
+
+</html>
