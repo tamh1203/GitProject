@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Cờ caro</title>
+  <link rel="stylesheet" href="css.css">
+  <script type="text/javascript" src="game.js"></script>
+  <style>
+    input[type='text'] {
+      width: 20px;
+      color: blue;
+    }
+
+    button {
+      width: 40px;
+      height: 40px;
+    }
+
+    #play {
+      width: 80px;
+      height: 20px;
+      color: darkmagenta;
+    }
+
+    body {
+      background-image: url("https://cdn.tgdd.vn/Files/2018/03/31/1078566/2aa25123-82fd-44e8-894a-a58fff098dc1_800x600.gif");
+    }
+
+    /* h1 {
+      text-align: center;
+      color: blue;
+    } */
+  </style>
+</head>
+
+<body>
+  <button><span style="color:red;">X</span></button>
+  <h1>Game Cờ Caro</h1>
+  <input type="text" id="row" name="row" value="20" /> Row
+  <input type="text" id="colume" name="colume" value="20" /> Colume
+  <button id="play" onclick="playgame()">Play</button>
+  <div id="main">
+
+  </div>
+</body>
+
+</html>

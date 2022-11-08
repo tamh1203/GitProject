@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="fullCSS.css">
+  <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+
+  <script type="text/javascript"
+    src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=DZRY-kNAiiJPDMMEc6DHp1gcCTfEVvOlVmydsKiDVfn0wB33CjtcobhNrPGLJCf8_P8GpK0ss-ulnxMoyUARtw"
+    charset="UTF-8"></script>
+</head>
+
+<body>
+  <div id="divtable" style="position: relative">
+    <div id="kin" style="position: absolute">
+      <p id="khang"></p>
+      <button type="button" onclick="Play()" style="background-color: green">PLAY AGAIN</button>
+      <button type="button" onclick="Surrender()" style="background-color: red">SURRENDER</button>
+    </div>
+    <table id="header">
+      <tr>
+        <th colspan="2"> X - O WITH MY FEN</th>
+
+      </tr>
+      <tr>
+        <th colspan="2" style="font-size: 20px; color: black">MY GAME - MY RULES</th>
+      </tr>
+      <tr>
+        <td class="score"><b>SCORE X: <i><span id="xScore"></span></i></b></td>
+        <td class="score"><b>SCORE O: <i><span id="oScore"></span></i></b></td>
+      </tr>
+
+    </table>
+    <div id="table"></div>
+  </div>
+  <div id="divcontrol">
+    <div><b>
+        <p style="font-size: 40px;font-family: TechnicBold; margin-top: 0">NEXT TURN</p>
+      </b>
+    </div>
+    <div id="imgPlayer">
+    </div>
+    <br><br>
+    <div>
+      <form>
+        <button type="button" onclick="Play()" style="background-color: green">PLAY</button>
+        <br><br>
+        <button type="button" onclick="Surrender()" style="background-color: red">SURRENDER</button>
+        <br><br>
+        <button type="button" onclick="Undo()" style="background-color: deepskyblue"> UNDO</button>
+      </form>
+    </div>
+  </div>
+</body>
+<script src="CaroBoard.js"></script>
+
+</html>

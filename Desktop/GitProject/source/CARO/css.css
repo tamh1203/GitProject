@@ -1,0 +1,17 @@
+table{
+  width:900px;
+  height:900px;
+  float:left;
+  text-align: center;
+  margin-left:100px;
+  margin-top:50px;
+
+}
+h1{
+  text-align: center ;
+  color:blue;
+  font-family: 'Courier New', Courier, monospace;
+}
+span{
+  color: brown;
+}
